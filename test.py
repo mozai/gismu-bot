@@ -9,11 +9,10 @@ API = twitter.Api(consumer_key=cfg["CON_KEY"],
                   consumer_secret=cfg["CON_SECRET"],
                   access_token_key=cfg["ACC_KEY"],
                   access_token_secret=cfg["ACC_SECRET"]
-                 )
+                  )
 
-print "Verify credentials:"
-print API.VerifyCredentials()
+print("Verify credentials:")
+print(API.VerifyCredentials())
 
-print "Most Recent Status:"
-print API.GetUserTimeline('gismu')[0]
-
+print("Most Recent Status:")
+print(API.GetUserTimeline(screen_name='gismu', count=1)[0])
